@@ -1,7 +1,9 @@
 //http://www.nganimate.org/angularjs/ng-repeat/move
 
-var cssTransition = function(){
+angular.module("angularui-semantic.shared.cssGenerator").service("cssGenerator", function(){
+
     this.cssNameCache = [];    
+    
     var getTransition = function(className, type){
         switch(type){
             case "appear" : 
@@ -38,7 +40,7 @@ var cssTransition = function(){
                     "top: -50px;"+
                     "height: 0px;"+
                 "}";
-            case "scale" : 
+            /*case "scale" : 
                 return "}"+  
                     className".animate-leave.animate-leave-active,"+
                     className".animate-enter {"+
@@ -59,7 +61,7 @@ var cssTransition = function(){
                         "transform: scaleY(1);"+
                         "height: 30px;"+
                         "opacity: 1;"+
-                    "}";
+                    "}";*/
         }
     };
         
@@ -124,4 +126,5 @@ var cssTransition = function(){
         addClass(cssText);
     
     }
-}
+
+});
