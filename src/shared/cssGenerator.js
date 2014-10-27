@@ -1,6 +1,6 @@
 //http://www.nganimate.org/angularjs/ng-repeat/move
 
-angular.module("angularui-semantic.shared.cssGenerator").service("cssGenerator", function(){
+angular.module("angularui-semantic.shared").service("cssGenerator", function(){
 
     this.cssNameCache = [];    
     
